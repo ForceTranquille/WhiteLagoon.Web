@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WitheLagoon.Domain\WitheLagoon.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
