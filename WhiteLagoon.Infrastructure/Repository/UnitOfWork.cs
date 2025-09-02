@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WhiteLagoon.Application.Common.Interfaces;
+using WhiteLagoon.Domain.Entities;
 using WhiteLagoon.Infrastructure.Data;
 
 namespace WhiteLagoon.Infrastructure.Repository
@@ -15,10 +16,13 @@ namespace WhiteLagoon.Infrastructure.Repository
 
 		public IVillaNumberRepository VillaNumber { get; private set; }
 
+		public IAmenityRepository Amenity { get; private set; }
+
 		public UnitOfWork(ApplicationDbContext context)
 		{
 			_context = context;
 			Villa = new VillaRepository(_context);
+			Amenity = new AmenityRepository(_context);
 			VillaNumber = new VillaNumberRepository(_context);
 		}
 
