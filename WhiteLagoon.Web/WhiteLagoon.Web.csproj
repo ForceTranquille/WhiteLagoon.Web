@@ -19,4 +19,8 @@
     <ProjectReference Include="..\WitheLagoon.Domain\WitheLagoon.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\VillaImages\" />
+  </ItemGroup>
+
 </Project>
