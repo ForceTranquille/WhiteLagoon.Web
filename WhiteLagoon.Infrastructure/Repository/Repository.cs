@@ -30,7 +30,7 @@ namespace WhiteLagoon.Infrastructure.Repository
 			return dbSet.Any(filter);
 		}
 
-		public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+		public T? Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
 		{
 			IQueryable<T> query = dbSet;
 			if (filter != null)
@@ -45,7 +45,6 @@ namespace WhiteLagoon.Infrastructure.Repository
 				}
 			}
 			return query.FirstOrDefault();
-
 		}
 
 		public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
